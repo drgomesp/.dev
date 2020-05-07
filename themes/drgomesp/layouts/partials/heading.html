@@ -1,0 +1,6 @@
+<header class="Heading">
+    <h3 class="Heading-title">
+        <a class="Heading-link u-clickable" href="{{ .RelPermalink }}" rel="bookmark">{{ .Title }}</a> {{ with .PublishDate | default nil }}
+        <small><time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">{{- .Format "January 2, 2006" -}}</time></small> {{ end }}
+    </h3>
+</header>

@@ -1,0 +1,54 @@
+{{ safeHTML `<?xml version="1.0" encoding="utf-8" ?>` }}
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method="html" doctype-system="about:legacy-compat" />
+  <xsl:template match="/rss/channel">
+    <html lang="{{ site.LanguageCode }}">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {{ hugo.Generator }}
+        <title><xsl:value-of select="title" /></title>
+        {{ $site_css := (.Scratch.Get "css").base }}
+        <link rel="stylesheet" href="{{ $site_css.Permalink }}" integrity="{{ $site_css.Data.Integrity }}" />
+      </head>
+      <body>
+        <nav class="u-background">
+          <div class="u-wrapper">
+            <ul class="Banner">
+              <li class="Banner-item Banner-item--title">
+                <a class="Banner-link u-clickable" href="{{ absURL nil }}">{{ site.Title }}</a>
+              </li>
+              {{ range site.Menus.nav }}
+                <li class="Banner-item">
+                  <a class="Banner-link u-clickable" href="{{ absURL .URL }}">{{ .Name }}</a>
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+        </nav>
+        <main>
+          <div class="u-wrapper">
+            <div class="u-padding">
+              <h2 class="Heading-title">
+                <a class="Heading-link u-clickable" href="{link}" rel="bookmark"><xsl:value-of select="title" /></a>
+              </h2>
+              {{ with site.Params.rss }}
+                <p>
+                  {{ safeHTML . }}
+                </p>
+              {{ end }}
+            </div>
+          </div>
+        </main>
+        {{ with site.Params.footer }}
+          <footer class="Footer">
+            <div class="u-wrapper">
+              <div class="u-padding">
+                {{ safeHTML . }}
+              </div>
+            </div>
+          </footer>
+        {{ end }}
+      </body>
+    </html>
+  </xsl:template>
+</xsl:stylesheet>

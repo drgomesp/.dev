@@ -1,0 +1,75 @@
+html,
+* {
+    font-size: small;
+    font-family: Cantarell, sans-serif;
+}
+
+.row div {
+    padding: 0;
+}
+
+.content {
+    margin: 2.5rem 0;
+    padding: 1.5rem 0;
+}
+
+.container {
+    padding: 0;
+    max-width: 800px;
+}
+
+.navigation {
+    background-color: whitesmoke;
+}
+
+.navigation .logo {
+    font-size: smaller;
+    color: #ab3c6f;
+    padding: 0;
+    position: relative;
+    top: .33rem;
+}
+
+.navigation .stamp {
+    width: 2.5rem;
+    position: relative;
+}
+
+.navigation .button {
+    background-color: whitesmoke;
+    text-transform: initial;
+}
+
+.navigation .button:hover {
+    color: #ab3c6f;
+    text-decoration: underline;
+    background-color: whitesmoke;
+}
+
+.sidebar img {
+    margin-left: 1.75rem;
+    border: 1px solid #ddd;
+}
+
+article {
+    margin: 0 0 1rem;
+}
+
+article header {
+    height: 4.2rem;
+}
+
+article time {
+    font-size: smaller;
+    font-family: sans-serif;
+}
+
+article a {
+    color: #ab3c6f !important;
+}
+
+footer {
+    padding: 1rem;
+    margin: 1rem 0 0;
+    max-height: 32px;
+}
