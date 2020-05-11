@@ -4,24 +4,24 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css"> {{ partial "meta.html" . }} {{ partial "title.html" . }} {{ partial "link.html" . }} {{ partial "load_site_assets.html" . }} {{ block "load_page_assets" . }} {{ with .Content }}{{ end }} {{ end }} {{ partial "assets.html" . }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hack/0.8.1/hack.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hack/0.8.1/standard.css" />
+
+    {{ partial "meta.html" . }} {{ partial "title.html" . }} {{ partial "link.html" . }} {{ partial "load_site_assets.html" . }} {{ block "load_page_assets" . }} {{ with .Content }}{{ end }} {{ end }} {{ partial "assets.html" . }}
 </head>
 
-<body>
-    {{ partialCached "banner.html" . }}
-    <main class="container">
-        <div class="content">
-            <div class="row">
-                <div class="col-md-9 col-md-first col-lg-normal">
-                    {{ block "main" . }}{{ end }}
-                </div>
-                <div class="sidebar col-md-offset-12">
-                    <img width=175 src="/img/me.jpeg" />
-                </div>
-            </div>
+<body class="standard">
+    <div class="grid">
+        <div class="cell -3of12">
+            {{ partialCached "sidebar.html" . }}
         </div>
-    </main>
-    {{ partialCached "footer.html" . }}
+        <div class="cell -9of12">
+            <main class="content">
+                {{ block "main" . }}{{ end }}
+            </main>
+            {{ partialCached "footer.html" . }}
+        </div>
+    </div>
 </body>
 
 </html>
