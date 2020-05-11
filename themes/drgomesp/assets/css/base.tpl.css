@@ -21,7 +21,7 @@
 
 html,
 * {
-    font-family: titillium, sans-serif;
+    font-family: titillium, cantarell, sans-serif;
     font-size: small;
 }
 
@@ -55,7 +55,7 @@ body {
 }
 
 .sidebar h1 small {
-    color: lightgray;
+    color: grey;
 }
 
 .sidebar a {
@@ -63,11 +63,20 @@ body {
 }
 
 .sidebar blockquote {
+    font-size: smaller;
     font-weight: lighter;
+    max-width: 200px;
+    position: fixed;
+    bottom: .5rem;
+}
+
+.sidebar .menu a {
+    color: gray;
+    border-bottom: 1px dotted grey;
 }
 
 footer {
     margin-top: 5rem;
-    border-top: 1px dotted #ddd;
+    border-top: 1px dotted grey;
     padding: .5rem;
 }
