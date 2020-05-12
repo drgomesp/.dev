@@ -21,12 +21,18 @@
 
 html,
 * {
-    font-family: titillium, cantarell, sans-serif;
-    font-size: medium;
+    font-family: titillium, sans-serif;
+    /* font-size: small */
+}
+
+a {
+    color: 
 }
 
 body {
-    /* padding: 2rem; */
+    color: #111;
+    margin: 0;
+    /* padding: 2rem */
     max-width: 960px;
 }
 
@@ -34,36 +40,58 @@ body {
     margin: 0;
 }
 
-.content {
-    padding: 0 2.5rem;
+@media (min-width:920px) {
+    .content {
+        margin-left: 240px;
+    }
+}
+
+@media (min-width:920px) {
+    .sidebar {
+        top: 0;
+        position: fixed;
+        max-width: 215px;
+        height: 100%;
+    }   
 }
 
 .sidebar {
-    background-color: linen;
-    padding: 1rem;
-    position: fixed;
-    max-width: 250px;
+    text-align: left;
+    padding: .5rem 1rem;
     height: 100%;
+    background-color: whitesmoke;
 }
 
 .sidebar img {
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-    max-width: 220px;
+    border: 5px solid white;
+    display: none;
+    max-width: 185px;
+    margin: 1rem auto;
+}
+
+@media (min-width:920px) {
+    .sidebar img {
+        display: block;
+    }
 }
 
 .sidebar h1 {
-    line-height: 1.25rem;
+    text-align: left;
     text-decoration: none;
 }
 
 .sidebar h1 a {
-    font-size: x-large;
     border: none;
 }
 
 .sidebar h1 small {
+    font-size: small;
+    font-weight: normal;
     color: grey;
+}
+
+.sidebar em {
+    font-style: normal;
 }
 
 .sidebar a {
@@ -71,21 +99,33 @@ body {
 }
 
 .sidebar blockquote {
-    font-size: smaller;
+    display: block;
+    font-size: x-small;
     font-weight: lighter;
-    max-width: 200px;
-    position: fixed;
-    bottom: .5rem;
-    border-left: 5px solid grey;
+    max-width: 195px;
+    position: relative;
+    bottom: -1rem;
+    color: grey;
+    border-left: 5px solid #ccc;
 }
 
-.sidebar .menu a {
-    color: gray;
-    border-bottom: 1px dotted grey;
+@media (min-width:920px) {
+    .sidebar blockquote {
+        position: fixed;
+        bottom: -.5rem;
+    }
+}
+
+/* .menu {
 }
 
 footer {
-    margin: 2.5rem 1.5rem;
-    border-top: 1px dotted grey;
-    padding: .5rem;
+    text-align: left;
+    border-top: 1px dotted #ccc;
+    padding: 0.5rem;
 }
+
+article header h3 small {
+    font-weight: lighter;
+    font-size: small;
+} */

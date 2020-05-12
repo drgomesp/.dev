@@ -29,7 +29,7 @@
 {{ range $paginator.Pages }}
 <article>
   {{ partial "heading.html" . }}
-  <!-- {{ if site.Params.summaries }}
+  {{ if site.Params.summaries }}
   {{ .Summary }}
   {{ if .Truncated }}
   <p>
@@ -39,7 +39,7 @@
   {{ else }}
   {{ .Content }}
   {{ end }}
-  {{ partial "tags.html" . }} -->
+  {{ partial "tags.html" . }}
 </article>
 {{ with site.Params.divider }}
 <div class="Divider"></div>
