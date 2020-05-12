@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hack/0.8.1/hack.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hack/0.8.1/standard.css" />
 
-    {{ partial "meta.html" . }} {{ partial "title.html" . }} {{ partial "link.html" . }} {{ partial "load_site_assets.html" . }} {{ block "load_page_assets" . }} {{ with .Content }}{{ end }} {{ end }} {{ partial "assets.html" . }}
+    {{ partial "meta.html" . }} {{ partial "title.html" . }} {{ partial "link.html" . }}
+    {{ partial "load_site_assets.html" . }} {{ block "load_page_assets" . }} {{ with .Content }}{{ end }} {{ end }}
+    {{ partial "assets.html" . }}
 </head>
 
 <body class="standard">

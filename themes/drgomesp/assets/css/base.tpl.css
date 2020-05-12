@@ -22,26 +22,34 @@
 html,
 * {
     font-family: titillium, cantarell, sans-serif;
-    font-size: small;
+    font-size: medium;
 }
 
 body {
-    padding: 2rem;
+    /* padding: 2rem; */
+    max-width: 960px;
 }
 
 .container {
     margin: 0;
 }
 
+.content {
+    padding: 0 2.5rem;
+}
+
 .sidebar {
+    background-color: linen;
+    padding: 1rem;
     position: fixed;
-    max-width: 200px;
+    max-width: 250px;
     height: 100%;
-    background-color: white;
 }
 
 .sidebar img {
-    max-width: 200px;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    max-width: 220px;
 }
 
 .sidebar h1 {
@@ -68,6 +76,7 @@ body {
     max-width: 200px;
     position: fixed;
     bottom: .5rem;
+    border-left: 5px solid grey;
 }
 
 .sidebar .menu a {
@@ -76,7 +85,7 @@ body {
 }
 
 footer {
-    margin-top: 5rem;
+    margin: 2.5rem 1.5rem;
     border-top: 1px dotted grey;
     padding: .5rem;
 }
