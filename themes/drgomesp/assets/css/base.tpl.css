@@ -1,36 +1,33 @@
+@keyframes blinker { 
+    50% {
+        opacity: 0;
+    }
+ }
+
+.blink {
+    animation: blinker 1s step-start infinite;
+}
+
 :root {
-    --color-black: #333; 
-    --color-olive: #3d9970;
-    --color-main-bg: #ddd;
-    --color-niceteal: #001f3f;
+    --color-black: #111; 
+    --color-maroon: #63293b;
+    --color-silver: #ede7e4; 
+    --color-dark: #272727;
+    --color-grey: #aaa;
 }
 
 html,
 * {
-    font-size-adjust: 0.46;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, Ubuntu, Cantarell, Roboto, "Helvetica Neue", sans-serif;
+    font-size-adjust: 0.45;
+    
 }
 
 body {
+    background-color: var(--color-silver);
     color: var(--color-black);
     font-weight: 400;
-    line-height: 1.4rem;
+    line-height: 1.2rem;
     margin: 0;
-}
-
-a {
-    border-bottom: 1px dotted var(--color-olive);
-    color: var(--color-olive);
-}
-
-a:hover {
-    text-decoration: none;
-    border-bottom: 1px dotted var(--color-niceteal);
-    color: var(--color-niceteal);
-}
-
-a:visited {
-    color: var(--color-niceteal);
 }
 
 .wrapper {
@@ -39,43 +36,75 @@ a:visited {
 }
 
 .sidebar {
-    color: var(--color-niceteal);
-    border-right: 5px solid var(--color-niceteal);
-    padding: 2rem;
+    color: var(--color-silver);
+    border-right: 1px solid black;
+    padding: 1rem;
     height: 100%;
     position: fixed;
-    max-width: 14rem;
-    background-color: var(--color-olive);
+    max-width: 12.5rem;
+    background-color: var(--color-maroon);
+}
+
+.sidebar kbd {
+    border: 1px solid var(--color-dark);
+    font-family: Inconsolata, monospace;
 }
 
 .sidebar img {
-    max-width: 200px;
+    border: 1px solid var(--color-dark);
+    max-width: 210px;
 }
 
 .sidebar h1 {
-    line-height: 1rem;
+    text-align: left;
+    line-height: 1.25rem;
+}
+
+.sidebar p {
+    line-height: normal;
 }
 
 .sidebar h1 a {
+    color: var(--color-silver);
     font-size: xx-large;
-    font-weight: bold;
-    color: var(--color-niceteal);
 }
 
 .sidebar h1 small {
-    font-size: medium;
+    font-size: smaller;
+}
+
+.sidebar .nav a {
+    color: var(--color-grey);
+}
+
+.sidebar .nav a:hover {
+    color: var(--color-silver);
+    border-bottom: 1px dotted var(--color-silver);
+}
+
+.sidebar .nav .active a {
+    color: var(--color-silver);
+}
+
+.sidebar .nav .active a:hover {
+    color: var(--color-silver);
 }
 
 .sidebar blockquote {
-    font-size: smaller;
-    line-height: normal;
     position: fixed;
     bottom: 0;
     max-width: 225px;
 }
 
 .main {
-    background-color: var(--color-main-bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PT Sans", "Roboto";
+    background-color: var(--color-silver);
     margin-left: 12.5rem;
-    padding: 2rem 4rem;
+    padding: 2rem 2.5rem;
+    max-width: 42rem;
+    background-color: whitesmoke;
+}
+
+.main a {
+    color: var(--color-maroon);
 }
