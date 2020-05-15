@@ -10,10 +10,10 @@
   <footer>
     {{ range $taxonomy := $taxonomy_list }}
       {{ if isset $.Params $taxonomy }}
-        <ul class="Tags">
+        <ul class="tags">
           {{ range $.GetTerms $taxonomy }}
             <li class="Tags-item u-background">
-              <a class="Tags-link u-clickable" href="{{ .RelPermalink }}" rel="tag">{{ .LinkTitle }}</a>
+              <a class="Tags-link u-clickable" href="{{ .RelPermalink }}" rel="tag"><mark>{{ .LinkTitle }}</mark></a>
             </li>
           {{ end }}
         </ul>
