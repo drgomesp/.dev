@@ -24,28 +24,56 @@
 
 {{ define "main" }}
 
-{{ $paginator := .Scratch.Get "paginator" }}
+<div class="column col-12">
+  <div class="navbar">
+    <section class="navbar-section">
+      <div class="navbar-center"><img src="/img/3.svg" width=32 alt="Spectre.css"></div>
+    </section>
+    <section class="navbar-section">
+      <div class="input-group">
+        <input class="form-input input-sm" type="text" placeholder="Search">
+        <button class="btn btn-primary btn-sm input-group-btn">-></button>
+      </div>
+    </div>
+  </div>
 
-{{ range $paginator.Pages }}
-<article>
-  {{ partial "heading.html" . }}
-  {{ if site.Params.summaries }}
-  {{ .Summary }}
-  {{ if .Truncated }}
-  <p>
-    <a class="u-clickable" href="{{ .RelPermalink }}">Read More…</a>
-  </p>
-  {{ end }}
-  {{ else }}
-  {{ .Content }}
-  {{ end }}
-  {{ partial "tags.html" . }}
-</article>
-{{ with site.Params.divider }}
+  <div class="divider"></div>
+
+  <div class="column">
+  <div class="hero bg-gray">
+    <div class="hero-body">
+      <h1>Hero title</h1>
+      <p>This is a hero example</p>
+    </div>
+  </div>
+</div>
+
 <div class="divider"></div>
-{{ end }}
-{{ end }}
 
-{{ partial "pagination.html" . }}
+{{ if 1 }}
+  {{ $paginator := .Scratch.Get "paginator" }}
 
+  {{ range $paginator.Pages }}
+  <article>
+    {{ partial "heading.html" . }}
+    {{ if site.Params.summaries }}
+    {{ .Summary }}
+    {{ if .Truncated }}
+    <p>
+      <a class="" href="{{ .RelPermalink }}">Read More…</a>
+    </p>
+    {{ end }}
+    {{ else }}
+    {{ .Content }}
+    {{ end }}
+    {{ partial "tags.html" . }}
+  </article>
+  {{ with site.Params.divider }}
+  <div class="divider"></div>
+  {{ end }}
+  {{ end }}
+
+  {{ partial "pagination.html" . }}
+
+  {{ end }}
 {{ end }}

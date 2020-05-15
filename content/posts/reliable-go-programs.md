@@ -1,5 +1,5 @@
 ---
-title: "My a Post"
+title: "Reliable Go Programs"
 date: 2020-05-13T17:12:21-03:00
 draft: true
 tags: [foo, bar, zip, kurwa-muc]
