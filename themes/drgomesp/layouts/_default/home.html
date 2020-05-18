@@ -27,26 +27,38 @@
 <div class="column col-12">
   <header class="navbar">
     <section class="navbar-section">
-      <div class="navbar-center"><img src="/img/3.svg" width=32 alt="Spectre.css"></div>
+      <div class="navbar-center"></div>
     </section>
   </header>
 </div>
 
-<div class="divider"></div>
-
-<div class="column">
-  <div class="hero bg-gray">
-    <div class="hero-body">
-      <strong>Hi! My name is Daniel</strong>
-      <p>
-        I'm a brazilian programmer, husband and father<sup>2</sup>. This is my little personal
-         space on the web. If you'd like to get in touch, its probably best to reach me at drgomesp [at] gmail.com.
-        </p>
+<div class="column col-12">
+  <div class="empty">
+    <div class="empty-icon">
+      <figure class="avatar avatar-xxl">
+        <img src="/img/me.jpeg" alt="...">
+        <img src="/img/3.svg" class="avatar-icon" alt="...">
+      </figure>
+    </div>
+    
+    <p class="empty-subtitle">I'm a brazilian programmer, husband and father<sup>2</sup>. This is my little personal
+      space on the web. If you'd like to get in touch, its probably best to reach me with an email.</p>
+    
+    <div class="empty-action">
+      <button class="btn btn-primary btn-sm">Send a message</button>
     </div>
   </div>
 </div>
 
-<div class="divider"></div>
+<div class="column col-12">
+  <div class="empty">
+    <p class="empty-subtitle">Here are some of the things I'm interested in:</p>
+
+    {{ range $key, $value := .Site.Taxonomies.tags }}
+      <a class="text-lowercase" href="/tags/{{ $key | urlize  }}"><mark>{{ $key | humanize }} ({{ len $value }})</a></mark>
+    {{ end }}
+  </div>
+</div>
 
 {{ if 0 }}
 {{ $paginator := .Scratch.Get "paginator" }}

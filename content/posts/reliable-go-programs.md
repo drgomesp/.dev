@@ -2,7 +2,7 @@
 title: "Reliable Go Programs"
 date: 2020-05-13T17:12:21-03:00
 draft: true
-tags: [foo, bar, zip, kurwa-muc]
+tags: [go, golang, reliability, high-availability]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id ipsum urna. Quisque eget sem elit. Etiam lacinia quis ex eu tincidunt. Aenean pharetra in ex at pulvinar. Sed malesuada sagittis turpis, non pharetra sem sagittis sit amet. Ut laoreet nisl eu dolor volutpat congue. Praesent feugiat diam at feugiat placerat.

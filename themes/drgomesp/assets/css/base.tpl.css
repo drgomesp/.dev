@@ -37,7 +37,7 @@ body {
     color: var(--color-dark);
     font-weight: 400;
     margin: 0;
-    height: 91.85%;
+    height: 90%;
 }
 
 a {
@@ -65,9 +65,18 @@ a:hover {
     margin: 0 auto;
 }
 
-.hero {
-    margin: 2.5rem 0;
+.empty {
+    margin: 0 0 .75rem;
     padding: 2.5rem;
+}
+
+.avatar-xxl {
+    height: 4.4rem;
+    width: 4.4rem;
+}
+
+.avatar {
+    background: none;
 }
 
 .btn-primary {
