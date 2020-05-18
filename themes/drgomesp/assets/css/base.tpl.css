@@ -23,10 +23,10 @@
 
 html,
 * {
-    font-size-adjust: 0.44;
-    line-height: 1.2rem;
+    font-size-adjust: 0.48;
+    line-height: 1.4rem;
     font-family: 
-        Inconsolata,
+        oxygen,
         -apple-system, 
         BlinkMacSystemFont,
         "Segoe UI",
@@ -34,8 +34,7 @@ html,
         Ubuntu,
         Cantarell,
         "Helvetica Neue",
-        sans-serif
-        ;
+        sans-serif;
 }
 
 a {
