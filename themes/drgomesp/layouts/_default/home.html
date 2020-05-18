@@ -37,8 +37,11 @@
 <div class="column">
   <div class="hero bg-gray">
     <div class="hero-body">
-      <h1>Hero title</h1>
-      <p>This is a hero example</p>
+      <strong>Hi! My name is Daniel</strong>
+      <p>
+        I'm a brazilian programmer, husband and father<sup>2</sup>. This is my little personal
+         space on the web. If you'd like to get in touch, its probably best to reach me at drgomesp [at] gmail.com.
+        </p>
     </div>
   </div>
 </div>
@@ -54,9 +57,7 @@
   {{ if site.Params.summaries }}
   {{ .Summary }}
   {{ if .Truncated }}
-  <p>
-    <a class="" href="{{ .RelPermalink }}">Read More…</a>
-  </p>
+  <a class="" href="{{ .RelPermalink }}">Read More…</a>
   {{ end }}
   {{ else }}
   {{ .Content }}

@@ -25,16 +25,7 @@ html,
 * {
     font-size-adjust: 0.48;
     line-height: 1.4rem;
-    font-family: 
-        oxygen,
-        -apple-system, 
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Oxygen-Sans,
-        Ubuntu,
-        Cantarell,
-        "Helvetica Neue",
-        sans-serif;
+    font-family: sans-serif;
 }
 
 a {
@@ -50,6 +41,10 @@ a:visited {
     color: var(--color-paleblue);
 }
 
+a:hover {
+    color: var(--color-lightblue);
+}
+
 body {
     background-color: var(--color-white);
     color: var(--color-dark);
@@ -58,7 +53,7 @@ body {
 }
 
 .navbar {
-    padding: .5rem 0;
+    padding: 0 0 0.5rem;
 }
 
 .navbar-center {
@@ -72,6 +67,7 @@ body {
 
 .hero {
     margin: 2.5rem 0;
+    padding: 2.5rem;
 }
 
 .btn-primary {
@@ -85,8 +81,9 @@ body {
 }
 
 .sidebar {
+    font-family: sans-serif;
     color: var(--color-silver);
-    padding: 1.65rem;
+    padding: 1.4rem;
     height: 100%;
     position: fixed;
     max-width: 13.5rem;
@@ -101,12 +98,12 @@ body {
 
 .sidebar img {
     border: 1px solid var(--color-dark);
-    max-width: 100%;
+    max-width: 99%;
 }
 
 .sidebar h1 {
     text-align: center;
-    line-height: 1.25rem;
+    line-height: 1.4rem;
 }
 
 .sidebar p {
@@ -127,21 +124,30 @@ body {
 }
 
 .sidebar .nav {
-    margin-left: 1rem;
+    margin-left: 1.5rem;
     font-size: smaller;
+    position: relative;
 }
 
 .sidebar .nav a {
+    display: inline;
+    border-left: 1px solid var(--color-paleblue);
+    border-bottom: 1px solid var(--color-dark);
     color: var(--color-silver);
 }
 
 .sidebar .nav a:hover {
     color: var(--color-silver);
-    border-bottom: 1px dotted var(--color-silver);
+    border-left: 1px solid var(--color-dark);
+    border-bottom: 1px solid var(--color-paleblue);
 }
 
 .sidebar .nav .active a {
     color: var(--color-silver);
+}
+
+.sidebar .nav .active {
+    font-weight: bold;
 }
 
 .sidebar .nav .active a:hover {
@@ -157,6 +163,9 @@ body {
     border-left: .2rem solid var(--color-silver);
 }
 
+.sidebar blockquote p,cite {
+}
+
 @media(min-height:600px) {
     .sidebar blockquote {
         display: block;
@@ -170,11 +179,6 @@ body {
 article time {
     font-size: medium;
 }
-
-article header {
-    /* margin-bottom: .15rem; */
-}
-
 
 article header h3 {
     font-size: x-large;
@@ -205,8 +209,33 @@ article footer .tags li {
     max-width: 42rem;
 }
 
+.main a {
+    color: var(--color-lightblue);
+}
+
+.main a:visited {
+    color: var(--color-paleblue);
+}
+
+.main a:hover {
+    color: var(--color-lightblue);
+}
+
 .main .main-footer {
-    font-size: x-small;
+    font-size: small;
     padding: .75rem 0;
     background-color: var(--color-white);
+}
+
+.main .divider {
+    margin: .5rem 0 1rem;
+}
+
+.main time {
+    font-family: sans-serif;
+}
+
+mark {
+    font-size: small;
+    font-family: sans-serif;
 }

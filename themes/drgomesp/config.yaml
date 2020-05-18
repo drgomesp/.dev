@@ -1,5 +1,5 @@
 params:
-  color: whitesmoke
+  color: white
   width: 42rem          # Any length in CSS syntax
   footer: >-            # A hardcoded space is needed before each html element
     All content on this site is licensed under a &#32;
@@ -29,7 +29,7 @@ params:
 
 menu:
   nav:
-  - name: Blog
+  - name: Notes
     url: posts/
     weight: 1
   - name: About
