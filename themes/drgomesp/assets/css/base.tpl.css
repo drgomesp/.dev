@@ -12,7 +12,7 @@
     --color-maroon: #63293d;
     --color-blue: #30527f;
     --color-lightblue: #2562dc;
-    --color-paleblue: #7395d9;
+    --color-paleblue: #8c98b7;
     --color-purple: #7e3260;
     --color-magenta: #ab3c6f;
     --color-white: #fff;
@@ -55,6 +55,14 @@ body {
     color: var(--color-dark);
     font-weight: 400;
     margin: 0;
+}
+
+.navbar {
+    padding: .5rem 0;
+}
+
+.navbar-center {
+    margin: 0 auto;
 }
 
 .wrapper {
@@ -167,6 +175,7 @@ article header {
     /* margin-bottom: .15rem; */
 }
 
+
 article header h3 {
     font-size: x-large;
     font-weight: bold;
@@ -176,6 +185,10 @@ article header h3 {
 article header h3 a {
     position: relative;
     top: .1rem;
+}
+
+article header h3 small {
+    color: var(--color-grey);
 }
 
 article footer .tags {
