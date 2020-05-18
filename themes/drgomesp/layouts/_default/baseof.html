@@ -7,21 +7,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
 
+    {{ range .AlternativeOutputFormats -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+
     {{ partial "meta.html" . }} {{ partial "title.html" . }} {{ partial "link.html" . }}
     {{ partial "load_site_assets.html" . }} {{ block "load_page_assets" . }} {{ with .Content }}{{ end }} {{ end }}
     {{ partial "assets.html" . }}
 </head>
 
 <body>
-    <div class="wrapper">
-        <aside class="sidebar">
-            {{ partialCached "sidebar.html" . }}
-        </aside>
-        <main class="main">
-            {{ block "main" . }}{{ end }}
-            {{ partialCached "footer.html" . }}
-        </main>
-    </div>
+    <aside class="sidebar">
+        {{ partialCached "sidebar.html" . }}
+    </aside>
+    <main class="main">
+        {{ block "main" . }}{{ end }}
+    </main>
+    {{ partialCached "footer.html" . }}
 </body>
 
 </html>

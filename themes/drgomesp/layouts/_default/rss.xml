@@ -5,7 +5,7 @@
   {{- $pages = $pages | first $limit }}
 {{- end }}
 {{- safeHTML `<?xml version="1.0" encoding="utf-8" ?>` }}
-{{ printf `<?xml-stylesheet type="text/xsl" href=%q ?>` $base_xml.Permalink | safeHTML }}
+<!-- {{ printf `<?xml-stylesheet type="text/xsl" href=%q ?>` $base_xml.Permalink | safeHTML }} -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>{{ if eq .Title site.Title }}{{ site.Title }}{{ else }}{{ with .Title }}{{ . }} on {{ end }}{{ site.Title }}{{ end }}</title>
