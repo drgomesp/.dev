@@ -10,26 +10,26 @@
 
 :root {
     --color-maroon: #63293d;
-    --color-blue: #30527f;
-    --color-lightblue: #2562dc;
+    --color-navyblue: #30527f;
+    --color-blue: #2562dc;
+    --color-lightblue: #e8f2ff;
     --color-paleblue: #667cb7;
     --color-purple: #7e3260;
     --color-magenta: #ab3c6f;
     --color-white: #fff;
     --color-silver: #f5f5f5; 
     --color-dark: #212121;
-    --color-grey: #9e9e9e;
+    --color-grey: #bfc1c4;
 }
 
-html {
-    height: 100%;
-}
+html{ height:100%; }
+body{ min-height:100%; padding:0; margin:0; position:relative; }
+body::after{ content:''; display:block; height:100px; }
 
 html,
 * {
-    font-size-adjust: 0.48;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
     line-height: 1.4rem;
-    font-family: sans-serif;
 }
 
 body {
@@ -37,11 +37,11 @@ body {
     color: var(--color-dark);
     font-weight: 400;
     margin: 0;
-    height: 90%;
 }
 
 a {
-    color: var(--color-lightblue);
+    border-bottom: 1px dotted var(--color-blue);
+    color: var(--color-blue);
 }
 
 a:focus {
@@ -53,21 +53,8 @@ a:visited {
     color: var(--color-paleblue);
 }
 
-a:hover {
-    color: var(--color-lightblue);
-}
-
-.navbar {
-    padding: 0 0 0.5rem;
-}
-
-.navbar-center {
-    margin: 0 auto;
-}
-
 .empty {
     margin: 0 0 .75rem;
-    padding: 2.5rem;
 }
 
 .avatar-xxl {
@@ -80,7 +67,7 @@ a:hover {
 }
 
 .btn-primary {
-    background-color: var(--color-blue) !important;
+    background-color: var(--color-navyblue) !important;
     border-color: var(--color-dark) !important;
 }
 
@@ -90,19 +77,18 @@ a:hover {
 }
 
 .sidebar {
-    font-family: sans-serif;
     color: var(--color-silver);
-    padding: 1.4rem;
+    padding: 1.2rem;
     height: 100%;
     position: fixed;
-    max-width: 13.5rem;
+    max-width: 13rem;
     border-right: 1px solid var(--color-dark);
-    background-color: var(--color-blue);
+    background-color: var(--color-navyblue);
 }
 
 .sidebar kbd {
     border: 1px solid var(--color-dark);
-    font-family: Inconsolata, SFMono-Regular, Monaco, Consolas, monospace;
+    font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, monospace;
 }
 
 .sidebar img {
@@ -120,8 +106,9 @@ a:hover {
 }
 
 .sidebar h1 a {
+    border: none;
     color: var(--color-silver);
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 .sidebar h1 a:hover {
@@ -146,6 +133,7 @@ a:hover {
 }
 
 .sidebar .nav a:hover {
+    background-color: none;
     color: var(--color-silver);
     border-left: 1px solid var(--color-dark);
     border-bottom: 1px solid var(--color-paleblue);
@@ -169,10 +157,11 @@ a:hover {
     bottom: 0;
     font-size: small;
     max-width: 235px;
-    border-left: .2rem solid var(--color-silver);
+    border-left: 1px solid var(--color-silver);
 }
 
-.sidebar blockquote p,cite {
+.sidebar blockquote cite {
+    font-size: smaller;
 }
 
 @media(min-height:600px) {
@@ -214,13 +203,27 @@ article footer .tags li {
 
 .main {
     min-height: 100%;
-    margin-left: 12.5rem;
+    margin-left: 12rem;
     padding: 1.25rem 2.5rem;
     max-width: 42rem;
+    display: table;
 }
 
 .main a {
-    color: var(--color-lightblue);
+    color: var(--color-blue);
+}
+
+.main .social-links {
+    white-space: nowrap;
+    font-size: small;
+}
+
+.main .social-links span {
+    /* color: var(--color-grey); */
+}
+
+.main .interests mark {
+    font-size: small;
 }
 
 .main a:visited {
@@ -228,16 +231,18 @@ article footer .tags li {
 }
 
 .main a:hover {
-    color: var(--color-lightblue);
+    background-color: var(--color-lightblue);
+    border-bottom: 1px solid var(--color-blue);
+    color: var(--color-blue);
+    text-decoration: none;
 }
 
 .main-footer {
-    margin-left: 13.5rem;
-    font-size: smaller;
-    padding: .75rem 1.25rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    position:absolute; 
+    bottom:0; 
+    font-size: small;
+    padding: .75rem 1.25rem .75rem 0;
+    width: 36rem;
     border-top: 1px solid var(--color-silver);
     background-color: var(--color-white);
 }
@@ -246,11 +251,6 @@ article footer .tags li {
     margin: .5rem 0 1rem;
 }
 
-.main time {
-    font-family: sans-serif;
-}
-
 mark {
     font-size: smaller;
-    font-family: sans-serif;
 }

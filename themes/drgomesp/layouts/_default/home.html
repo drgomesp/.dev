@@ -40,22 +40,30 @@
         <img src="/img/3.svg" class="avatar-icon" alt="...">
       </figure>
     </div>
-    
+
     <p class="empty-subtitle">I'm a brazilian programmer, husband and father<sup>2</sup>. This is my little personal
-      space on the web. If you'd like to get in touch, its probably best to reach me with an email.</p>
-    
-    <div class="empty-action">
-      <button class="btn btn-primary btn-sm">Send a message</button>
+      space on the web. If you'd like to get in touch, please reach me at my email. Also, get to know a little bit more
+      about me with the following links:</p>
+
+    <div class="empty-action social-links">
+      <span>[ <strong>email</strong>: <a href="mailto:drgomesp@gmail.com">drgomesp@gmail.com</a> ]</span>
+      <span>[ <strong>github</strong>: <a href="https://github.com/drgomesp">github.com/drgomesp</a> ]</span>
+      <br>
+      <span>[ <strong>mastodon</strong>: <a href="https://fosstodon.org/@drgomesp">fosstodon.org/@drgomesp</a> ]</span>
+      <span>[ <strong>linkedin</strong>: <a href="https://www.linkedin.com/in/drgomesp/">linkedin.com/in/drgomesp</a>
+        ]</span>
     </div>
   </div>
 </div>
 
 <div class="column col-12">
-  <div class="empty">
-    <p class="empty-subtitle">Here are some of the things I'm interested in:</p>
+  <div class="empty interests">
+    <p class="empty-subtitle">Here are some of the things I'm interested in and usually studying, and you might be too:
+    </p>
 
     {{ range $key, $value := .Site.Taxonomies.tags }}
-      <a class="text-lowercase" href="/tags/{{ $key | urlize  }}"><mark>{{ $key | humanize }} ({{ len $value }})</a></mark>
+    <a class="text-lowercase" href="/tags/{{ $key | urlize  }}"><mark>{{ $key | humanize }}
+        ({{ len $value }})</a></mark>
     {{ end }}
   </div>
 </div>

@@ -1,8 +1,8 @@
 ---
-title: "My Second Post"
+title: "Writting a Gameboy emulator in Rust"
 date: 2020-05-05T11:35:09-03:00
 draft: true
-tags: bar
+tags: [gameboy, emulators, rust]
 ---
 
 Duis et convallis quam. Suspendisse potenti. Aliquam sagittis egestas erat in lobortis. Suspendisse vel odio vel justo laoreet aliquet. 

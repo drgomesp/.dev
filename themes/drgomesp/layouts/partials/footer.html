@@ -1,5 +1,7 @@
 {{ with site.Params.footer }}
-<footer class="main-footer">
-    {{ safeHTML . }}
-</footer>
+<div class="column col-12">
+    <footer class="main-footer">
+        {{ safeHTML . }}
+    </footer>
+</div>
 {{ end }}
