@@ -16,6 +16,7 @@ tags:
     - foss
     - microservices
     - game-engines
+    - cannabis
     - ci/cd
     - kubernetes
     - gcloud

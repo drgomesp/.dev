@@ -11,9 +11,9 @@
 :root {
     --color-maroon: #63293d;
     --color-navyblue: #30527f;
-    --color-blue: #3465c4;
-    --color-lightblue: #e8f2ff;
-    --color-paleblue: #667cb7;
+    --color-blue: #2d5dbd;
+    --color-lightblue: #e7eef8;
+    --color-paleblue: #6b8fd5;
     --color-purple: #7e3260;
     --color-magenta: #ab3c6f;
     --color-white: #fff;
@@ -29,7 +29,7 @@ body::after{ content:''; display:block; height:100px; }
 
 html,
 * {
-    font-family: Rosario, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: "Blogger Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     line-height: 1.4rem;
 }
 
@@ -41,7 +41,7 @@ body {
 }
 
 a {
-    border-bottom: 1px dotted var(--color-blue);
+    border-bottom: 1px solid var(--color-blue);
     color: var(--color-blue);
 }
 
@@ -128,7 +128,7 @@ a:visited {
 
 .sidebar .nav a {
     display: inline;
-    border-left: 1px solid var(--color-paleblue);
+    border-left: 1px solid var(--color-lightblue);
     border-bottom: 1px solid var(--color-dark);
     color: var(--color-silver);
 }
@@ -137,7 +137,7 @@ a:visited {
     background-color: none;
     color: var(--color-silver);
     border-left: 1px solid var(--color-dark);
-    border-bottom: 1px solid var(--color-paleblue);
+    border-bottom: 1px solid var(--color-lightblue);
 }
 
 .sidebar .nav .active a {
@@ -213,6 +213,10 @@ article footer .tags li {
     color: var(--color-blue);
 }
 
+.main a:hover {
+    background-color: var(--color-lightblue);
+}
+
 .main .social-links {
     white-space: nowrap;
     font-size: small;
@@ -226,6 +230,10 @@ article footer .tags li {
     color: var(--color-darkgray);
     white-space: nowrap;
     font-size: small;
+}
+
+.main .interests mark a:hover {
+    background-color: #ffe9b3;
 }
 
 .main a:visited {
@@ -253,6 +261,17 @@ article footer .tags li {
     line-height: normal;
 }
 
+.main .bookmarks td {
+    padding: 0;
+}
+
+.main .bookmarks .title {
+}
+
+.main .bookmarks .upvoter:hover {
+    border-bottom-color: var(--color-blue);
+}
+
 .main .divider {
     margin: .5rem 0 1rem;
 }
@@ -261,10 +280,12 @@ mark {
     font-size: smaller;
 }
 
-.main .interests a {
+.main .interests a, .tags a {
     border: none;
 }
 
-.main .interests a:hover {
-    text-decoration: underline;
+.tags a:hover {
+    background: none;
+    border: none;
 }
+

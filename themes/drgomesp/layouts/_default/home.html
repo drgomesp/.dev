@@ -42,8 +42,8 @@
     </div>
 
     <p class="empty-subtitle">I'm a brazilian programmer, husband and father<sup>2</sup>. This is my little personal
-      space on the web. If you'd like to get in touch, please reach me at my email. Also, get to know a little bit more
-      about me with the following links:</p>
+      space on the web. If you'd like to get in touch, please reach me at my email.
+      or find more about me with the following links:</p>
 
     <div class="empty-action social-links">
       <span>[ <strong>email</strong>: <a href="mailto:drgomesp@gmail.com">drgomesp@gmail.com</a> ]</span>
@@ -65,6 +65,23 @@
     {{ range $key, $value := .Site.Taxonomies.tags }}
     <mark><a class="text-lowercase" href="/tags/{{ $key | urlize  }}">{{ $key | urlize }}</a></mark>
     {{ end }}
+  </div>
+
+  <div class="empty">
+    <p class="empty-subtitle">These are some of my recent bookmarks:</p>
+    <table class="bookmarks table table-striped table-hover">
+      <tbody>
+        {{ range $i, $l := $.Site.Data.links }}
+        <tr>
+          <td>
+            <div class="text-center">
+              <a href="{{ .href }}">{{ .title }} &#8599;</a>
+            </div>
+          </td>
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
   </div>
 </div>
 
