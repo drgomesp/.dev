@@ -1,7 +1,6 @@
 ---
 title: "Writting a Gameboy emulator in Rust"
 date: 2020-05-05T11:35:09-03:00
-draft: true
 tags: [gameboy, emulators, rust]
 ---
 

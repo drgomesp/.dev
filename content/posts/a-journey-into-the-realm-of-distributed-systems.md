@@ -1,7 +1,6 @@
 ---
 title: "A journey into the realm of distributed systems"
 date: 2020-05-06T11:57:25-03:00
-draft: true
 tags: [go, golang, distributed-systems,grpc]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Reliable Go Programs"
 date: 2020-05-13T17:12:21-03:00
-draft: true
+draft: false
 tags: [go, golang, reliability, high-availability]
 ---
 

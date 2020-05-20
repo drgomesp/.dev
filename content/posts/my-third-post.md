@@ -1,7 +1,6 @@
 ---
 title: "My Third Post"
 date: 2020-05-05T16:42:49-03:00
-draft: true
 tags: [bar, zip]
 ---
 

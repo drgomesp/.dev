@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://drgomesp.dev/</loc>
+    <lastmod>2020-05-13T17:12:21-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drgomesp.dev/tags/go/</loc>
+    <lastmod>2020-05-13T17:12:21-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drgomesp.dev/tags/golang/</loc>
+    <lastmod>2020-05-13T17:12:21-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drgomesp.dev/tags/high-availability/</loc>
+    <lastmod>2020-05-13T17:12:21-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drgomesp.dev/posts/</loc>
+    <lastmod>2020-05-13T17:12:21-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drgomesp.dev/tags/reliability/</loc>
+    <lastmod>2020-05-13T17:12:21-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drgomesp.dev/posts/reliable-go-programs/</loc>
+    <lastmod>2020-05-13T17:12:21-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drgomesp.dev/tags/</loc>
+    <lastmod>2020-05-13T17:12:21-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drgomesp.dev/posts/a-journey-into-the-realm-of-distributed-systems/</loc>
+    <lastmod>2020-05-06T11:57:25-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drgomesp.dev/tags/distributed-systems/</loc>
+    <lastmod>2020-05-06T11:57:25-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drgomesp.dev/tags/grpc/</loc>
+    <lastmod>2020-05-06T11:57:25-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drgomesp.dev/tags/bar/</loc>
+    <lastmod>2020-05-05T16:42:49-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drgomesp.dev/posts/my-third-post/</loc>
+    <lastmod>2020-05-05T16:42:49-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drgomesp.dev/tags/zip/</loc>
+    <lastmod>2020-05-05T16:42:49-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drgomesp.dev/tags/emulators/</loc>
+    <lastmod>2020-05-05T11:35:09-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drgomesp.dev/tags/gameboy/</loc>
+    <lastmod>2020-05-05T11:35:09-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drgomesp.dev/tags/rust/</loc>
+    <lastmod>2020-05-05T11:35:09-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drgomesp.dev/posts/writting-a-gameboy-emualtor-in-rust-part-1/</loc>
+    <lastmod>2020-05-05T11:35:09-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drgomesp.dev/tags/api/</loc>
+    <lastmod>2020-05-05T10:53:31-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drgomesp.dev/tags/async/</loc>
+    <lastmod>2020-05-05T10:53:31-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drgomesp.dev/posts/golang-async-apis/</loc>
+    <lastmod>2020-05-05T10:53:31-03:00</lastmod>
+  </url>
+  
+</urlset>

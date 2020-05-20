@@ -1,7 +1,6 @@
 ---
 title: "Golang Async APIs"
 date: 2020-05-05T10:53:31-03:00
-draft: true
 tags: [go, golang, api, async]
 ---
 
