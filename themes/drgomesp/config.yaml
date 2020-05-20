@@ -6,7 +6,6 @@ params:
      <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">
       Creative Commons Attribution 4.0 International License
      </a>.<br /> 
-    <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
   rss: To subscribe to this RSS feed, copy its address and paste it into your favorite feed reader.
   summaries: true       # Set to true to show summaries of posts on homepage
   divider: true         # Set to false to remove divider below posts on homepage

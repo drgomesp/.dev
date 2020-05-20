@@ -4,6 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
+    <link rel="icon" href="/img/3.svg">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
 
     {{ range .AlternativeOutputFormats -}}
@@ -23,6 +24,16 @@
         {{ block "main" . }}{{ end }}
         {{ partialCached "footer.html" . }}
     </main>
+
+    <script src="/__/firebase/7.14.4/firebase-app.js"></script>
+    <script src="/__/firebase/7.14.4/firebase-analytics.js"></script>
+    <script src="/__/firebase/7.14.4/firebase-performance.js"></script>
+    <script src="/__/firebase/init.js"></script>
+
+    <script>
+        var perf = firebase.performance();
+        // ...
+      </script>    
 </body>
 
 </html>

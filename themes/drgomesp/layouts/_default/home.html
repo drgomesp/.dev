@@ -58,12 +58,11 @@
 
 <div class="column col-12">
   <div class="empty interests">
-    <p class="empty-subtitle">Here are some of the things I'm interested in and usually studying, and you might be too:
+    <p class="empty-subtitle">These are some of the things I'm interested in and you might be too:
     </p>
 
     {{ range $key, $value := .Site.Taxonomies.tags }}
-    <a class="text-lowercase" href="/tags/{{ $key | urlize  }}"><mark>{{ $key | humanize }}
-        ({{ len $value }})</a></mark>
+    <a class="text-lowercase" href="/tags/{{ $key | urlize  }}"><mark>{{ $key | urlize }}</mark></a>
     {{ end }}
   </div>
 </div>
