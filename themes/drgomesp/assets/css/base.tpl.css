@@ -19,7 +19,8 @@
     --color-white: #fff;
     --color-silver: #f5f5f5; 
     --color-dark: #212121;
-    --color-grey: #bfc1c4;
+    --color-darkgray: #3b4351;
+    --color-gray: #bfc1c4;
 }
 
 html{ height:100%; }
@@ -189,7 +190,7 @@ article header h3 a {
 }
 
 article header h3 small {
-    color: var(--color-grey);
+    color: var(--color-gray);
 }
 
 article footer .tags {
@@ -221,7 +222,9 @@ article footer .tags li {
     /* color: var(--color-grey); */
 }
 
-.main .interests mark {
+.main .interests mark a {
+    color: var(--color-darkgray);
+    white-space: nowrap;
     font-size: small;
 }
 

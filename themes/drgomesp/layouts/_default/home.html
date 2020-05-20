@@ -63,7 +63,7 @@
     </p>
 
     {{ range $key, $value := .Site.Taxonomies.tags }}
-    <a class="text-lowercase" href="/tags/{{ $key | urlize  }}"><mark>{{ $key | urlize }}</mark></a>
+    <mark><a class="text-lowercase" href="/tags/{{ $key | urlize  }}">{{ $key | urlize }}</a></mark>
     {{ end }}
   </div>
 </div>
