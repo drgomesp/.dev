@@ -29,7 +29,7 @@ body::after{ content:''; display:block; height:100px; }
 
 html,
 * {
-    font-family: rosario, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: Inconsolata, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     line-height: 1.4rem;
 }
 
@@ -238,6 +238,7 @@ article footer .tags li {
 }
 
 .main .followed-articles {
+    font-weight: 300;
     display: flex;
 }
 
@@ -248,17 +249,31 @@ article footer .tags li {
     flex-direction: column;
     padding: .5rem;
     text-align: left;
-    font-size: small;
 }
 
-.main .followed-articles article h5 a,.summary {
-    line-height: 1rem;
-    font-size: small;
+.main .followed-articles article h5 {
+    min-height: 2.25rem;
+    line-height: .75rem;
+    font-size: smaller;
+}
+
+.main .followed-articles article a {
+    line-height: .5rem;
+}
+
+.main .followed-articles article .summary {
+    line-height: .6rem;
+    font-size: smaller;
 }
 
 .main .followed-articles .attribution {
-    font-size: x-small;
+    line-height: .85rem;
 }
+
+.main .followed-articles .source {
+    line-height: .75rem;
+    font-size: smaller;
+} 
 
 .main a:visited {
     color: var(--color-paleblue);
