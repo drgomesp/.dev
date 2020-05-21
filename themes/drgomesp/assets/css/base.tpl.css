@@ -55,7 +55,8 @@ a:visited {
 }
 
 .empty {
-    margin: 0 0 .75rem;
+    padding: 1.25rem;
+    margin: 0 0 1.25rem;
 }
 
 .avatar-xxl {
@@ -234,6 +235,29 @@ article footer .tags li {
 
 .main .interests mark a:hover {
     background-color: #ffe9b3;
+}
+
+.main .followed-articles {
+    display: flex;
+}
+
+.main .followed-articles article {
+    /* color: var(--color-gray); */
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    text-align: left;
+    font-size: small;
+}
+
+.main .followed-articles article h5 a,.summary {
+    line-height: 1rem;
+    font-size: small;
+}
+
+.main .followed-articles .attribution {
+    font-size: x-small;
 }
 
 .main a:visited {

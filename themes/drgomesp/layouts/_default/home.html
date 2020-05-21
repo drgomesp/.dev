@@ -41,16 +41,23 @@
       </figure>
     </div>
 
-    <p class="empty-subtitle">I'm a brazilian programmer, husband and father<sup>2</sup>. This is my little personal
-      space on the web. If you'd like to get in touch, please reach me at my email.
+    <p class="empty-subtitle">I'm a brazilian programmer, husband and
+      father<sup>2</sup>. This is my little personal
+      space on the web. If you'd like to get in touch, please reach me at my
+      email.
       or find more about me with the following links:</p>
 
     <div class="empty-action social-links">
-      <span>[ <strong>email</strong>: <a href="mailto:drgomesp@gmail.com">drgomesp@gmail.com</a> ]</span>
-      <span>[ <strong>github</strong>: <a href="https://github.com/drgomesp">github.com/drgomesp</a> ]</span>
+      <span>[ <strong>email</strong>: <a href="mailto:drgomesp@gmail.com">drgomesp@gmail.com</a>
+        ]</span>
+      <span>[ <strong>github</strong>: <a href="https://github.com/drgomesp">github.com/drgomesp</a>
+        ]</span>
       <br>
-      <span>[ <strong>mastodon</strong>: <a href="https://fosstodon.org/@drgomesp">fosstodon.org/@drgomesp</a> ]</span>
-      <span>[ <strong>linkedin</strong>: <a href="https://www.linkedin.com/in/drgomesp/">linkedin.com/in/drgomesp</a>
+      <span>[ <strong>mastodon</strong>: <a
+          href="https://fosstodon.org/@drgomesp">fosstodon.org/@drgomesp</a>
+        ]</span>
+      <span>[ <strong>linkedin</strong>: <a
+          href="https://www.linkedin.com/in/drgomesp/">linkedin.com/in/drgomesp</a>
         ]</span>
     </div>
 
@@ -59,12 +66,22 @@
 
 <div class="column col-12">
   <div class="empty interests">
-    <p class="empty-subtitle">These are some of the things I'm interested in and you might be too:
+    <p class="empty-subtitle">These are some of the things I'm interested in and
+      you might be too:
     </p>
 
     {{ range $key, $value := .Site.Taxonomies.tags }}
     <mark><a class="text-lowercase" href="/tags/{{ $key | urlize  }}">{{ $key | urlize }}</a></mark>
     {{ end }}
+  </div>
+
+  <div class="empty">
+    <p class="empty-subtitle">These are some articles from blogs I follow around the web:
+    </p>
+
+    <div class="empty-action followed-articles">
+      {{ partial "openring.html" . }}
+    </div>
   </div>
 
   <!-- <div class="empty">
