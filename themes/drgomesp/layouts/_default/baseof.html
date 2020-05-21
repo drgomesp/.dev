@@ -6,9 +6,10 @@
 
     <link rel="icon" href="/img/3.svg">
 
-    <link rel="stylesheet" href="//brick.freetls.fastly.net/Blogger+Sans:300,400,700">
+     <link href="https://fonts.googleapis.com/css2?family=Rosario:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="//brick.freetls.fastly.net/BPreplay:400,700,400i,700i">
     
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="/css/spectre.min.css">
 
     {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}

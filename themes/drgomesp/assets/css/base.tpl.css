@@ -17,7 +17,7 @@
     --color-purple: #7e3260;
     --color-magenta: #ab3c6f;
     --color-white: #fff;
-    --color-silver: #f5f5f5; 
+    --color-silver: #f5f5f5;
     --color-dark: #212121;
     --color-darkgray: #3b4351;
     --color-gray: #bfc1c4;
@@ -29,7 +29,7 @@ body::after{ content:''; display:block; height:100px; }
 
 html,
 * {
-    font-family: "Blogger Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: rosario, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     line-height: 1.4rem;
 }
 
@@ -259,6 +259,10 @@ article footer .tags li {
 .main-footer p {
     margin: 0;
     line-height: normal;
+}
+
+.main .bookmarks {
+    font-size: smaller;
 }
 
 .main .bookmarks td {
