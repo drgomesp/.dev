@@ -1,5 +1,10 @@
 [
     {
+        "title": "Nu Html Checker - W3C Markup Validation Service",
+        "href": "https://validator.w3.org/nu/",
+        "score": 13
+    },
+    {
         "title": "First impressions on Sourcehut",
         "href": "https://nullbuffer.com/2019/11/18/sourcehut_impressions.html",
         "score": "3"

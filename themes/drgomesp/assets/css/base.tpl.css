@@ -1,441 +1,318 @@
-@keyframes blinker { 
-    50% {
-        opacity: 0;
-    }
- }
+/*
+ * -- BASE STYLES --
+ * Most of these are inherited from Base, but I want to change a few.
+ */
 
-.blink {
-    animation: blinker 1s step-start infinite;
-}
-
-:root {
-    --color-maroon: #63293d;
-    --color-navyblue: #30527f;
-    --color-blue: #2d5dbd;
-    --color-lightblue: #e7eef8;
-    --color-paleblue: #6b8fd5;
-    --color-purple: #7e3260;
-    --color-magenta: #ab3c6f;
-    --color-white: #fff;
-    --color-silver: #f5f5f5;
-    --color-dark: #212121;
-    --color-darkgray: #3b4351;
-    --color-gray: #bfc1c4;
-}
-
-html {
-    height:100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; 
-}
-
-body{ 
-    min-height:100%; 
-    padding:0; 
-    margin:0;
-    overflow-x: hidden; 
-    position:relative;
-    line-height: 1.4;
-    background-color: var(--color-white);
-    color: var(--color-dark);
-    font-weight: 400;
-}
-
-html,
-* {
-    font-family: Inconsolata, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+body {
+    color: #333;
 }
 
 a {
-    border-bottom: 1px solid var(--color-blue);
-    color: var(--color-blue);
+    text-decoration: none;
+    color: #1b98f8;
 }
 
-a:focus {
+
+/*
+ * -- HELPER STYLES --
+ * Over-riding some of the .pure-button styles to make my buttons look unique
+ */
+
+.primary-button,
+.secondary-button {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     box-shadow: none;
-    border: none;
+    border-radius: 20px;
 }
 
-a:visited {
-    color: var(--color-paleblue);
+.primary-button {
+    color: #fff;
+    background: #1b98f8;
+    margin: 1em 0;
 }
 
-.empty {
-    padding: 1.5rem;
-    margin: 0 0 .5rem;
-}
-
-.empty-subtitle {
-    font-size: smaller;
-}
-
-.avatar-xxl {
-    height: 4.4rem;
-    width: 4.4rem;
-}
-
-.avatar {
-    background: none;
-}
-
-.btn-primary {
-    background-color: var(--color-navyblue) !important;
-    border-color: var(--color-navyblue) !important;
-}
-
-.form-input:focus {
-    box-shadow: none;
-    border-color: var(--color-dark);
-}
-
-@media(min-width:840px) {
-    .sidebar {
-        color: var(--color-silver);
-        padding: 1.2rem;
-        height: 100%;
-        position: fixed;
-        max-width: 12.5rem;
-        border-right: 1px solid var(--color-dark);
-        background-color: var(--color-navyblue);
-    }
-}
-
-.sidebar {
-    font-size: smaller;
-    color: var(--color-silver);
-    padding: 1.2rem;
-    height: 100%;
-    border-right: 1px solid var(--color-dark);
-    background-color: var(--color-navyblue);
-}
-
-.sidebar kbd {
-    border: 1px solid var(--color-dark);
-    font-family: Inconsolata, monospace;
-}
-
-.sidebar img {
-    border: 1px solid var(--color-dark);
-    max-width: 99%;
-}
-
-.sidebar h1 {
-    text-align: center;
-    line-height: 1.4rem;
-}
-
-.sidebar p {
-    line-height: normal;
-}
-
-.sidebar h1 a {
-    border: none;
-    color: var(--color-silver);
-    font-size: xx-large;
-}
-
-.sidebar h1 a:hover {
-    color: var(--color-silver);
-}
-
-.sidebar h1 small {
-    font-size: smaller;
-}
-
-.sidebar .nav a {
-    display: inline;
-    border-left: 1px solid var(--color-lightblue);
-    border-bottom: 1px solid var(--color-dark);
-    color: var(--color-silver);
-}
-
-@media(min-width:360px) {
-    .sidebar .nav {
-        display: inline;
-        text-align: center;
-        margin-left: 6rem;
-    }
-}
-
-@media(max-width:600px) {
-    .sidebar .nav {
-        display: inline;
-        margin-left: 20rem;
-    }
+.secondary-button {
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #666;
+    padding: 0.5em 2em;
+    font-size: 80%;
 }
 
 
-@media(min-width:860px) {
-    .sidebar .nav, .sidebar .nav li {
-        list-style: none;
-        text-align: left;
-        margin-left: 1rem;
-    }
-}
+/*
+ * -- LAYOUT STYLES --
+ * This layout consists of three main elements, `#nav` (navigation bar), `#main-content` (email list), and `#main` (email content). All 3 elements are within `#layout`
+ */
 
-@media(max-width:860px) {
-    .sidebar .nav, .sidebar .nav li {
-        display: inline;
-        text-align: center;
-    }
-}
-
-.sidebar .nav,.sidebar .nav ul  {
+#layout,
+#nav,
+#main-content,
+#main {
     margin: 0;
     padding: 0;
 }
 
-.sidebar .nav a:hover {
-    background-color: none;
-    color: var(--color-silver);
-    border-left: 1px solid var(--color-dark);
-    border-bottom: 1px solid var(--color-lightblue);
-}
 
-.sidebar .nav .active a {
-    color: var(--color-silver);
-}
+/* Make the navigation 100% width on phones */
 
-.sidebar .nav .active {
-    font-weight: bold;
-}
-
-.sidebar .nav .active a:hover {
-    color: var(--color-silver);
-}
-
-.sidebar blockquote {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    font-size: small;
-    max-width: 10rem;
-}
-
-.sidebar blockquote cite {
-    font-size: smaller;
-}
-
-@media(min-height:860px) {
-    .sidebar blockquote {
-        display: block;
-    }
-}
-
-.sidebar blockquote p {
-    margin: 0 0 .25rem;
-}
-
-article time {
-    font-size: medium;
-}
-
-article header h3 {
-    font-size: x-large;
-    font-weight: bold;
-    margin: 0 0 .5rem;
-}
-
-article header h3 a {
+#nav {
+    width: 100%;
+    height: 40px;
     position: relative;
-    top: .1rem;
+    background: rgb(37, 42, 58);
+    text-align: center;
 }
 
-article header h3 small {
-    color: var(--color-gray);
+
+/* Show the "Menu" button on phones */
+
+#nav nav-menu-button {
+    display: block;
+    top: 0.5em;
+    right: 0.5em;
+    position: absolute;
 }
 
-article footer .tags {
-    margin: 0 0 1rem;
+
+/* When "Menu" is clicked, the navbar should be 80% height */
+
+#nav.active {
+    height: 80%;
 }
 
-article footer .tags li {
-    display: inline;
+
+/* Don't show the navigation items... */
+
+.nav-inner {
+    display: none;
 }
 
-@media(min-width:840px) {
-    .main {
-        min-height: 100%;
-        margin-left: 11rem;
-        padding: .75rem 2rem;
-        max-width: 36rem;
-        display: table;
-    }
+
+/* ...until the "Menu" button is clicked */
+
+#nav.active .nav-inner {
+    display: block;
+    padding: 2em 0;
 }
 
-.main a {
-    color: var(--color-blue);
-}
 
-.main a:hover {
-    background-color: var(--color-lightblue);
-}
+/*
+ * -- NAV BAR STYLES --
+ * Styling the default .pure-menu to look a little more unique.
+ */
 
-.main .social-links {
-    font-size: small;
-}
-
-@media(min-width:360px) {
-    .main .social-links {
-        max-width: 25rem;
-        margin: 0 auto;
-        white-space: nowrap;
-    }
-}
-
-.flex-row {
-    display: flex;
-    flex: 1 1;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-@media(max-width:550px) {
-    .flex-row {
-        display: flex;
-        flex: 1;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-}
-
-.flex-col {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    flex-direction: column;
-    box-sizing:border-box;
-}
-
-@media(max-width:550px) {
-    .flex-col {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex: 1;
-        flex-direction: column;
-        box-sizing:border-box;
-    }
-}
-
-@media (max-width:767px) {
-  .flex-col {
-    flex-basis: calc(50% - 12px);
-  }
-}
-
-@media (max-width:460px) {
-  .flex-col {
-    flex-basis: 100%;
-  }
-}
-
-.main .interests mark a {
-    color: var(--color-darkgray);
-    white-space: nowrap;
-    font-size: small;
-}
-
-.main .interests mark a:hover {
-    background-color: #ffe9b3;
-}
-
-.main .followed-articles {
-    font-weight: 300;
-    display: flex;
-}
-
-.main .followed-articles article {
-    flex: 1 1 0;
-    display: flex;
-    flex-direction: column;
-    padding: .5rem;
+#nav .pure-menu {
+    background: transparent;
+    border: none;
     text-align: left;
 }
 
-.main .followed-articles article h5 {
-    min-height: 2.25rem;
-    line-height: .75rem;
-    font-size: smaller;
+#nav .pure-menu-link:hover,
+#nav .pure-menu-link:focus {
+    background: rgb(55, 60, 90);
 }
 
-.main .followed-articles article a {
-    line-height: .5rem;
+#nav .pure-menu-link {
+    color: #fff;
+    margin-left: 0.5em;
 }
 
-.main .followed-articles article .summary {
-    line-height: .6rem;
-    font-size: smaller;
+#nav .pure-menu-heading {
+    border-bottom: none;
+    font-size: 110%;
+    color: rgb(75, 113, 151);
 }
 
-.main .followed-articles .attribution {
-    line-height: .85rem;
+
+/*
+ * -- EMAIL STYLES --
+ * Styles relevant to the email messages, labels, counts, and more.
+ */
+
+.email-count {
+    color: rgb(75, 113, 151);
 }
 
-.main .followed-articles .source {
-    line-height: .75rem;
-    font-size: smaller;
-} 
-
-.main a:visited {
-    color: var(--color-paleblue);
+.email-label-personal,
+.email-label-work,
+.email-label-travel {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 0.5em;
+    border-radius: 3px;
 }
 
-.main a:hover {
-    border-bottom: 1px solid var(--color-blue);
-    color: var(--color-blue);
-    text-decoration: none;
+.email-label-personal {
+    background: #ffc94c;
 }
 
-@media(max-width:360px) {
-    .main-footer {
-        max-width: 18rem;
-    }
+.email-label-work {
+    background: #41ccb4;
 }
 
-.main-footer {
-    position: absolute; 
-    bottom: 0; 
-    font-size: x-small;
-    padding: .75rem .25rem;
-    width: 30rem;
-    border-top: 1px solid var(--color-silver);
-    background-color: var(--color-white);
-    line-height: 1.8;
+.email-label-travel {
+    background: #40c365;
 }
 
-.main-footer p {
+
+/* Email Item Styles */
+
+.email-item {
+    padding: 0.9em 1em;
+    border-bottom: 1px solid #ddd;
+    border-left: 6px solid transparent;
+}
+
+.email-avatar {
+    border-radius: 3px;
+    margin-right: 0.5em;
+}
+
+.email-name,
+.email-subject {
     margin: 0;
 }
 
-.main .bookmarks {
-    font-size: smaller;
+.email-name {
+    text-transform: uppercase;
+    color: #999;
 }
 
-.main .bookmarks td {
-    padding: 0;
+.email-desc {
+    font-size: 80%;
+    margin: 0.4em 0;
 }
 
-.main .bookmarks .upvoter:hover {
-    border-bottom-color: var(--color-blue);
+.email-item-selected {
+    background: #eee;
 }
 
-.main .divider {
-    margin: .5rem 0 1rem;
+.email-item-unread {
+    border-left: 6px solid #1b98f8;
 }
 
-mark {
-    font-size: smaller;
+
+/* Email Content Styles */
+
+.footer-content-header,
+.footer-content-body,
+.footer-content-footer {
+    padding: 1em 2em;
 }
 
-.main .interests a, .tags a {
-    border: none;
+.footer-content-header {
+    border-top: 1px solid #ddd;
 }
 
-.tags a:hover {
-    background: none;
-    border: none;
+.footer-content-title {
+    margin: 0.5em 0 0;
 }
 
+.footer-content-subtitle {
+    font-size: 1em;
+    margin: 0;
+    font-weight: normal;
+}
+
+.footer-content-subtitle span {
+    color: #999;
+}
+
+.footer-content-controls {
+    margin-top: 2em;
+    text-align: right;
+}
+
+.footer-content-controls .secondary-button {
+    margin-bottom: 0.3em;
+}
+
+.email-avatar {
+    width: 40px;
+    height: 40px;
+}
+
+
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+
+@media (min-width: 40em) {
+    /* Move the layout over so we can fit the nav + list in on the left */
+    #layout {
+        padding-left: 500px;
+        /* "left col (nav + list)" width */
+        position: relative;
+    }
+    /* These are position:fixed; elements that will be in the left 500px of the screen */
+    #nav,
+    #main-content {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        overflow: auto;
+    }
+    #nav {
+        margin-left: -500px;
+        /* "left col (nav + list)" width */
+        width: 150px;
+        height: 100%;
+    }
+    /* Show the menu items on the larger screen */
+    .nav-inner {
+        display: block;
+        padding: 2em 0;
+    }
+    /* Hide the "Menu" button on larger screens */
+    #nav .nav-menu-button {
+        display: none;
+    }
+    #main-content {
+        margin-left: -350px;
+        width: 100%;
+        height: 33%;
+        border-bottom: 1px solid #ddd;
+    }
+    #footer {
+        position: fixed;
+        top: 88%;
+        right: 0;
+        bottom: 0;
+        left: 150px;
+        overflow: auto;
+        width: auto;
+        /* so that it's not 100% */
+    }
+}
+
+
+/*
+ * -- DESKTOP (AND UP) MEDIA QUERIES --
+ * On desktops and other large-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+
+@media (min-width: 60em) {
+    /* This will take up the entire height, and be a little thinner */
+    #main-content {
+        margin-left: -350px;
+        width: 350px;
+        height: 100%;
+        border-right: 1px solid #ddd;
+    }
+    /* This will now take up it's own column, so don't need position: fixed; */
+    #main {
+        position: static;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.post-avatar {
+    border-radius: 25px;
+}

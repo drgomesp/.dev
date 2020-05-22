@@ -9,22 +9,29 @@ tags:
     - javascript
     - typescript
     - linux
-    - posix
     - emulators
     - distributed-systems
     - forge
     - foss
     - microservices
     - game-engines
-    - cannabis
     - ci/cd
     - kubernetes
     - gcloud
     - firebase
     - aws
+    - sql
+    - git
+    - c
+    - blockchain
+    - web
+    - databases
+    - books
     - video-games
     - gameboy
-    - work
+    - design-patterns
+    - tdd
+    - reverse-engineering
     - software-engineering
     - open-source
 ---
