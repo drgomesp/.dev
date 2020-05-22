@@ -26,14 +26,6 @@
 
 <div class="container grid-md">
   <div class="column col-12">
-    <header class="navbar">
-      <section class="navbar-section">
-        <div class="navbar-center"></div>
-      </section>
-    </header>
-  </div>
-
-  <div class="column col-12">
     <div class="empty">
       <div class="empty-icon">
         <figure class="avatar avatar-xxl">
@@ -49,18 +41,29 @@
         or find more about me with the following links:</p>
 
       <div class="empty-action social-links">
-        <span>[ <strong>email</strong>: <a href="mailto:drgomesp@gmail.com">drgomesp@gmail.com</a>
-          ]</span>
-        <br>
-        <span>[ <strong>github</strong>: <a href="https://github.com/drgomesp">github.com/drgomesp</a>
-          ]</span>
-        <br>
-        <span>[ <strong>mastodon</strong>: <a href="https://fosstodon.org/@drgomesp">fosstodon.org/@drgomesp</a>
-          ]</span>
-        <br>
-        <span>[ <strong>linkedin</strong>: <a href="https://www.linkedin.com/in/drgomesp/">linkedin.com/in/drgomesp</a>
-          ]</span>
-        <br>
+        <div class="flex-row">
+          <div class="flex-col">
+            <span>[ <strong>email</strong>: <a
+                href="mailto:drgomesp@gmail.com">drgomesp@gmail.com</a>
+              ]</span>
+          </div>
+          <div class="flex-col">
+            <span>[ <strong>mastodon</strong>: <a
+                href="https://fosstodon.org/@drgomesp">fosstodon.org/@drgomesp</a>
+              ]</span>
+          </div>
+          <div class="flex-col">
+            <span>[ <strong>github</strong>: <a
+                href="https://github.com/drgomesp">github.com/drgomesp</a>
+              ]</span>
+          </div>
+          <div class="flex-col">
+            <span>[ <strong>linkedin</strong>: <a
+                href="https://www.linkedin.com/in/drgomesp/">linkedin.com/in/drgomesp</a>
+              ]</span>
+            <br>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -73,7 +76,8 @@
       </p>
 
       {{ range $key, $value := .Site.Taxonomies.tags }}
-      <mark><a class="text-lowercase" href="/tags/{{ $key | urlize  }}">{{ $key | urlize }}</a></mark>
+      <mark><a class="text-lowercase"
+          href="/tags/{{ $key | urlize  }}">{{ $key | urlize }}</a></mark>
       {{ end }}
     </div>
 
