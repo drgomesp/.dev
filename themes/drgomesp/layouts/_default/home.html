@@ -24,82 +24,86 @@
 
 {{ define "main" }}
 
-<div class="column col-12">
-  <header class="navbar">
-    <section class="navbar-section">
-      <div class="navbar-center"></div>
-    </section>
-  </header>
-</div>
-
-<div class="column col-12">
-  <div class="empty">
-    <div class="empty-icon">
-      <figure class="avatar avatar-xxl">
-        <img src="/img/me.jpeg" alt="...">
-        <img src="/img/3.svg" class="avatar-icon" alt="...">
-      </figure>
-    </div>
-
-    <p class="empty-subtitle">I'm a brazilian programmer, husband and
-      father<sup>2</sup>. This is my little personal
-      space on the web. If you'd like to get in touch, please reach me at my
-      email.
-      or find more about me with the following links:</p>
-
-    <div class="empty-action social-links">
-      <span>[ <strong>email</strong>: <a href="mailto:drgomesp@gmail.com">drgomesp@gmail.com</a>
-        ]</span>
-      <span>[ <strong>github</strong>: <a href="https://github.com/drgomesp">github.com/drgomesp</a>
-        ]</span>
-      <br>
-      <span>[ <strong>mastodon</strong>: <a
-          href="https://fosstodon.org/@drgomesp">fosstodon.org/@drgomesp</a>
-        ]</span>
-      <span>[ <strong>linkedin</strong>: <a
-          href="https://www.linkedin.com/in/drgomesp/">linkedin.com/in/drgomesp</a>
-        ]</span>
-    </div>
-
-  </div>
-</div>
-
-<div class="column col-12">
-  <div class="empty interests">
-    <p class="empty-subtitle">These are some of the things I'm interested in and
-      you might be too:
-    </p>
-
-    {{ range $key, $value := .Site.Taxonomies.tags }}
-    <mark><a class="text-lowercase" href="/tags/{{ $key | urlize  }}">{{ $key | urlize }}</a></mark>
-    {{ end }}
+<div class="container grid-md">
+  <div class="column col-12">
+    <header class="navbar">
+      <section class="navbar-section">
+        <div class="navbar-center"></div>
+      </section>
+    </header>
   </div>
 
-  <div class="empty">
-    <p class="empty-subtitle">These are some articles from blogs I follow around the web:
-    </p>
+  <div class="column col-12">
+    <div class="empty">
+      <div class="empty-icon">
+        <figure class="avatar avatar-xxl">
+          <img src="/img/me.jpeg" alt="...">
+          <img src="/img/3.svg" class="avatar-icon" alt="...">
+        </figure>
+      </div>
 
-    <div class="empty-action followed-articles">
-      {{ partial "openring.html" . }}
+      <p class="empty-subtitle">I'm a brazilian programmer, husband and
+        father<sup>2</sup>. This is my little personal
+        space on the web. If you'd like to get in touch, please reach me at my
+        email.
+        or find more about me with the following links:</p>
+
+      <div class="empty-action social-links">
+        <span>[ <strong>email</strong>: <a href="mailto:drgomesp@gmail.com">drgomesp@gmail.com</a>
+          ]</span>
+        <br>
+        <span>[ <strong>github</strong>: <a href="https://github.com/drgomesp">github.com/drgomesp</a>
+          ]</span>
+        <br>
+        <span>[ <strong>mastodon</strong>: <a href="https://fosstodon.org/@drgomesp">fosstodon.org/@drgomesp</a>
+          ]</span>
+        <br>
+        <span>[ <strong>linkedin</strong>: <a href="https://www.linkedin.com/in/drgomesp/">linkedin.com/in/drgomesp</a>
+          ]</span>
+        <br>
+      </div>
+
     </div>
   </div>
 
-  <!-- <div class="empty">
-    <p class="empty-subtitle">These are some of my recent bookmarks:</p>
-    <table class="bookmarks table table-striped table-hover">
-      <tbody>
-        {{ range $i, $l := $.Site.Data.links }}
-        <tr>
-          <td>
-            <div class="text-center">
-              <a href="{{ .href }}">{{ .title }} &#8599;</a>
-            </div>
-          </td>
-        </tr>
-        {{ end }}
-      </tbody>
-    </table>
-  </div> -->
+  <div class="column col-12">
+    <div class="empty interests">
+      <p class="empty-subtitle">These are some of the things I'm interested in and
+        you might be too:
+      </p>
+
+      {{ range $key, $value := .Site.Taxonomies.tags }}
+      <mark><a class="text-lowercase" href="/tags/{{ $key | urlize  }}">{{ $key | urlize }}</a></mark>
+      {{ end }}
+    </div>
+
+    <div class="empty">
+      <p class="empty-subtitle">These are some articles from blogs I follow around the web:
+      </p>
+
+      <div class="empty-action followed-articles">
+        {{ partial "openring.html" . }}
+      </div>
+    </div>
+
+    <!-- <div class="empty">
+      <p class="empty-subtitle">These are some of my recent bookmarks:</p>
+      <table class="bookmarks table table-striped table-hover">
+        <tbody>
+          {{ range $i, $l := $.Site.Data.links }}
+          <tr>
+            <td>
+              <div class="text-center">
+                <a href="{{ .href }}">{{ .title }} &#8599;</a>
+              </div>
+            </td>
+          </tr>
+          {{ end }}
+        </tbody>
+      </table>
+    </div> -->
+  </div>
+
 </div>
 
 {{ if 0 }}
