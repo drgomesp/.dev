@@ -1,9 +1,6 @@
 {{ with site.Params.footer }}
-<div class="column col-12">
-    <footer class="main-footer">
-        <p>Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://firebase.google.com">Firebase</a>. 
-        The source code for this website is <a href="https://github.com/drgomesp/drgomesp.dev">open</a>.</p>
-        <p>{{ safeHTML . }}</p>
-    </footer>
-</div>
+<footer class="main-footer">
+    <p>The source code for this website is <a href="https://github.com/drgomesp/drgomesp.dev">open</a>.
+        {{ safeHTML . }}</p>
+</footer>
 {{ end }}
