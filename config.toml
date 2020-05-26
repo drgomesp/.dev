@@ -3,6 +3,18 @@ languageCode = "en-us"
 title = "Daniel Ribeiro"
 theme = "drgomesp"
 
+[markup]
+[markup.highlight]
+codeFences = true
+guessSyntax = false
+hl_Lines = ""
+lineNoStart = 1
+lineNos = true
+lineNumbersInTable = true
+noClasses = true
+style = "pastie"
+tabWidth = 4
+
 [taxonomies]
 tag = "tags"
 
@@ -61,3 +73,5 @@ gzip = false
 [[deployment.matchers]]
 pattern = "^.+\\.(html|xml|json)$"
 gzip = true
+
+

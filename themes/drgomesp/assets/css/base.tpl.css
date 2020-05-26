@@ -61,6 +61,12 @@ mark a:visited {
     color: var(--color-dark);
 }
 
+pre {
+    padding: .5rem;
+    font-size: small;
+    background-color: var(--color-silver);
+}
+
 .navigation {
     display: flex;
     flex-direction: column;
@@ -129,7 +135,7 @@ mark a:visited {
     flex-direction: column;
     max-width: 52em;
     margin-left: 11.5rem;
-    padding: 0 2.5rem;
+    padding: 0 3.5rem;
 }
 
 .content h1 {
@@ -141,7 +147,8 @@ mark a:visited {
 }
 
 .content .hero {
-    padding: 1.5rem 1rem;
+    padding: 1rem;
+    margin: 2.5rem;
 }
 
 .content .hero h3 {
@@ -165,6 +172,39 @@ mark a:visited {
 
 .content .followed-articles article {
     margin: 0 .25rem;
+}
+
+.content .article-header h2 a {
+    text-decoration: none;
+}
+
+.content h1, h2 {
+    margin-bottom: 1rem;
+}
+
+.content .year-section {
+    font-weight: normal;
+}
+
+.content .year-section::after {
+  content: '';
+  height: 35%;
+  width: 1px;
+
+  position: absolute;
+  right: 0;
+  top: 1rem;
+
+  background-color: var(--color-silver);
+}
+
+.content .note-list time {
+    font-family: monospace;
+    font-size: smaller;
+}
+
+.content .note-list ul {
+    list-style: none;
 }
 
 .content footer {

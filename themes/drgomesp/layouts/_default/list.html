@@ -1,18 +1,22 @@
 {{ define "main" }}
 
-  {{ partial "heading.html" . }}
+<!-- {{ partial "heading.html" . }} -->
+
+<section class="note-list">
+  <h2>Notes</h2>
 
   {{ .Content }}
 
   {{ range .Pages.GroupByPublishDate "2006" }}
-    <h3>{{ .Key }}</h3>
-    <ul>
-      {{ range .Pages }}
-        <li>
-          <time>{{ .PublishDate.Format "2006-01-02" }}</time> – <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </li>
-      {{ end }}
-    </ul>
+  <h3 class="year-section">{{ .Key }}</h3>
+  <ul>
+    {{ range .Pages }}
+    <li>
+      <time>{{ .PublishDate.Format "2006-01-02" }}</time> – <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
   {{ end }}
+</section>
 
 {{ end }}

@@ -1,10 +1,7 @@
-<header>
-    <h3>
-        {{ with .PublishDate | default nil }}
-            <small><time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">{{- .Format "January 2, 2006" -}}</time></small>
-        {{ end }}
-        <a class="Heading-link u-clickable" href="{{ .RelPermalink }}" rel="bookmark">
-            {{ .Title }}
-        </a>
-    </h3>
+<header class="article-header">
+    <h2>
+        <!-- <a class="Heading-link u-clickable" href="{{ .RelPermalink }}" rel="bookmark"> -->
+        {{ .Title }}
+        <!-- </a> -->
+    </h2>
 </header>

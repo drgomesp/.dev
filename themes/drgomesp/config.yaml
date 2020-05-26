@@ -25,7 +25,6 @@ params:
   #   - js/foo.js
   #   - bar.js
 
-
 menu:
   nav:
   - name: Notes
