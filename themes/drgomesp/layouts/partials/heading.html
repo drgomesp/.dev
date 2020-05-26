@@ -1,7 +1,27 @@
+{{ $taxonomy_list := slice }}
+
+{{ range $taxonomy, $_ := site.Taxonomies }}
+{{ $taxonomy_list = $taxonomy_list | append $taxonomy }}
+{{ end }}
+
 <header class="article-header">
-    <h2>
-        <!-- <a class="Heading-link u-clickable" href="{{ .RelPermalink }}" rel="bookmark"> -->
-        {{ .Title }}
-        <!-- </a> -->
-    </h2>
+    <sup>
+        <time>{{ .PublishDate.Format "2006-01-02" }}</time>
+        <span class="sep">|</span>
+        <small><a class="Heading-link u-clickable" href="{{ .RelPermalink }}" rel="bookmark">Permalink</a></small>
+    </sup>
+    <h2>{{ .Title }}</h2>
+    <sub>
+        {{ range $taxonomy := $taxonomy_list }}
+        {{ if isset $.Params $taxonomy }}
+        <ul class="tags">
+            {{ range $.GetTerms $taxonomy }}
+            <li class="Tags-item u-background">
+                <a class="Tags-link u-clickable" href="{{ .RelPermalink }}" rel="tag"><mark>{{ .LinkTitle }}</mark></a>
+            </li>
+            {{ end }}
+        </ul>
+        {{ end }}
+        {{ end }}
+    </sub>
 </header>

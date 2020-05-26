@@ -4,8 +4,7 @@ params:
   footer: >-            # A hardcoded space is needed before each html element
     All content on this site is licensed under a &#32;
      <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">
-      Creative Commons Attribution 4.0 International License
-     </a>.<br /> 
+      CC BY 4.0 license</a>.<br />
   rss: To subscribe to this RSS feed, copy its address and paste it into your favorite feed reader.
   summaries: true       # Set to true to show summaries of posts on homepage
   divider: true         # Set to false to remove divider below posts on homepage

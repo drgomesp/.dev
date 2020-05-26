@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
 
 :root {
     --color-primary: #0e4dcc;
     --color-secundary: #f1f3fa;
     --color-dark: #272727;
-    --color-silver: #efefef;
+    --color-silver: #eaeaea;
+    --color-gray: #7a7a7a;
+    --color-lightgray: #b7b7b7;
     --color-white: #fdfdfd;
 
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-family: Rubik, -apple-system,BlinkMacSystemFont,"Segoe UI",Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
     font-size: 15px;
-    line-height: 1.4;
+    line-height: 1.6;
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -67,6 +69,11 @@ pre {
     background-color: var(--color-silver);
 }
 
+.sep {
+    color: var(--color-lightgray);
+    font-size: small;
+}
+
 .navigation {
     display: flex;
     flex-direction: column;
@@ -96,7 +103,7 @@ pre {
 
 .navigation .logo {
     text-align: center;
-    font-size: x-large;
+    font-size: large;
     line-height: 1;
     margin-bottom: 1rem;
 }
@@ -133,17 +140,33 @@ pre {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    max-width: 52em;
+    max-width: 51rem;
     margin-left: 11.5rem;
-    padding: 0 3.5rem;
+    padding: 0 1rem 0 3.25rem;
 }
 
-.content h1 {
-    margin: 0;
+.content h1,.content h2 {
+    display: inline-block;
+}
+
+.content .article-header {
+    margin-bottom: 2.5rem;
+}
+
+.content time {
+    color: var(--color-gray);
+}
+
+.content .article-header sup {
+    display: block;
+}
+
+.content .article-header sub {
+    top: .5rem;
 }
 
 .content p {
-    margin: 1.5rem 0;
+    margin: 1rem 0;
 }
 
 .content .hero {
@@ -161,6 +184,7 @@ pre {
     padding: .25rem;
     text-align: right;
     font-size: smaller;
+    margin-bottom: .75rem;
     /* border-bottom: 1px solid var(--color-silver); */
 }
 
@@ -174,12 +198,30 @@ pre {
     margin: 0 .25rem;
 }
 
+.content .article-header sup {
+    color: var(--color-gray);
+}
+
 .content .article-header h2 a {
     text-decoration: none;
 }
 
-.content h1, h2 {
-    margin-bottom: 1rem;
+.content .article-header .tags {
+    list-style: none;
+    margin: 0;
+}
+
+.content .article-header .tags li {
+    display: inline;
+}
+
+.content .article-header .tags a {
+    text-decoration: none;
+    background-color: #ffe9b3;
+} 
+
+.content h1, .content h2 {
+    margin-bottom: 0;
 }
 
 .content .year-section {
@@ -208,8 +250,7 @@ pre {
 }
 
 .content footer {
-    /* border-top: 1px solid var(--color-silver); */
-    font-size: x-small;
+    font-size: small;
     margin-top: auto;
 }
 
