@@ -8,7 +8,7 @@ tags:
 ---
 With the recent popularization of Golang, I've decided to show how graphics programming can be done in Go using modern OpenGL techniques. I'll assume you are familiar with the concept of OpenGL and have a general idea of how it works on a higher level.
 
-Open Graphics Library (OpenGL) is a cross-language, cross-platform application programming interface (API) for rendering 2D and 3D vector graphics.
+{{< figure src="/img/posts/getting_started_with_opengl_and_go/1.png" caption="Open Graphics Library (OpenGL) is a cross-language, cross-platform application programming interface (API) for rendering 2D and 3D vector graphics." alt="OpenGL's logo" >}}
 
 ### OpenGL context and platform-agnostic APIs
 
@@ -96,6 +96,8 @@ Here, we're looping as long as the window should be opened, and we do basic oper
   - Poll events, which actually allows us to catch events such as the close button, so that the window can close (and, of course, all other events, including input events)
 
 The final result should be a beautiful black window:
+
+{{< figure src="/img/posts/getting_started_with_opengl_and_go/2.png" alt="Window with a Black Screen" >}}
 
 Now that we have an OpenGL context ready window, let's actually initialize OpenGL and call a simple function to clear the screen to a nice blue color (this code should be placed before our window loop):
 

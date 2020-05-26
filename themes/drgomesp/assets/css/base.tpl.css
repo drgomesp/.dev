@@ -32,6 +32,16 @@ a {
     text-decoration: underline;
 }
 
+figure {
+    text-align: center;
+    color: var(--color-gray);
+}
+
+img + em { 
+    display: inline-block;
+    text-align: center;
+}
+
 a:visited {
     color: var(--color-primary);
 }
@@ -149,8 +159,24 @@ pre {
     display: inline-block;
 }
 
+.content article ul {
+    margin: 1.5rem 2.5rem;
+}
+
+.content article li {
+    margin: .5rem;
+}
+
 .content .article-header {
     margin-bottom: 2.5rem;
+}
+
+.content .article-header ul {
+    margin: 0;
+}
+
+.content .article-header li {
+    margin: 0;
 }
 
 .content time {
