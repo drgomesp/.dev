@@ -339,3 +339,10 @@ pre {
 .content footer p {
     margin: .5rem 0 .75rem;
 }
+
+.content hr {
+    max-width: 15rem;
+    margin: 1rem auto;
+    border-bottom: none;
+    border-top: 1px solid var(--color-silver);
+}

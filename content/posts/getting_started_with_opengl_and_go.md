@@ -123,7 +123,11 @@ for !win.ShouldClose() {
 }
 ```
 
-And the result should be a blue screen. Here's the full code:
+And the result should be a blue screen, just like this one:
+
+{{< figure src="/img/posts/getting_started_with_opengl_and_go/3.png" alt="Window with a Blue Screen" >}}
+
+Here's the full code:
 
 ```go
 package main
@@ -177,3 +181,5 @@ func main() {
 ```
 
 I hope you enjoyed this article, and that it was helpful to you in some way. We're going to be looking at drawing some basic primitive geometries in the next article. See you then!
+
+---
