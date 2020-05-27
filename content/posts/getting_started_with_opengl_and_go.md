@@ -103,7 +103,7 @@ Now that we have an OpenGL context ready window, let's actually initialize OpenG
 
 ```go
 if err := gl.Init(); err != nil {
-   panic(err)
+	panic(err)
 }
 ```
 
@@ -117,15 +117,13 @@ And for that to work properly, we need to adjust our loop, with an extra OpenGL 
 
 ```go
 for !win.ShouldClose() {
-   gl.Clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
-   win.SwapBuffers()
-   glfw.PollEvents()
+	gl.Clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
+	win.SwapBuffers()
+	glfw.PollEvents()
 }
 ```
 
-And the result should be:
-
-Here's the full code:
+And the result should be a blue screen. Here's the full code:
 
 ```go
 package main
@@ -177,7 +175,5 @@ func main() {
 	}
 }
 ```
-
-
 
 I hope you enjoyed this article, and that it was helpful to you in some way. We're going to be looking at drawing some basic primitive geometries in the next article. See you then!

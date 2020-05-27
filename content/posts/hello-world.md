@@ -1,7 +1,7 @@
 ---
 title: "Hello World"
-date: 2020-05-19T23:15:57-03:00
-draft: true
+date: 1990-01-30T00:00:00-03:00
+draft: false
 tags: 
     - go
     - rust
