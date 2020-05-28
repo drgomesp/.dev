@@ -30,7 +30,7 @@ go get -u github.com/go-gl/gl/v4.1-core/gl
 
 Here, the versions might differ depending on what version of OpenGL your graphics card (and the graphics cards of those who will be targeted by your code) support. For more reference on the versions, check https://github.com/go-gl/gl#usage.
 
-*We'll use GLFW 3.2 and OpenGL 4.1-core for the rest of this series of articles.*
+> *We'll use GLFW 3.2 and OpenGL 4.1-core for the rest of this series of articles.*
 
 ### Opening a window
 
@@ -74,6 +74,8 @@ if err != nil {
     panic(fmt.Errorf("could not create opengl renderer: %v", err))
 }
 ```
+
+### Preparing for OpenGL
 
 After creating the window, we just need a few more steps:
 

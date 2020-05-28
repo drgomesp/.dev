@@ -120,6 +120,7 @@ pre {
 }
 
 .navigation .logo {
+    margin-top: .5rem;
     text-align: center;
     font-size: large;
     line-height: 1;
@@ -254,6 +255,10 @@ pre {
     font-weight: normal;
     margin: .25rem 0;
     text-transform: capitalize;
+}
+
+.content article h3 {
+    margin: 2.5rem 0 0;
 }
 
 .content .social-links {
