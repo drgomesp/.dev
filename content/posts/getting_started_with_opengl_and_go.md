@@ -149,7 +149,6 @@ const (
 
 func main() {
 	runtime.LockOSThread()
-
 	if err := glfw.Init(); err != nil {
 		panic(fmt.Errorf("could not initialize glfw: %v", err))
 	}
@@ -160,14 +159,12 @@ func main() {
 	glfw.WindowHint(glfw.OpenGLProfile, glfw.OpenGLCoreProfile)
 	glfw.WindowHint(glfw.OpenGLForwardCompatible, glfw.True)
 
-	win, err := glfw.CreateWindow(800, 600, "Hello world", nil, nil)
-
+	win, err := glfw.CreateWindow(windowWidth, windowHeight, "Hello world", nil, nil)
 	if err != nil {
 		panic(fmt.Errorf("could not create opengl renderer: %v", err))
 	}
 
 	win.MakeContextCurrent()
-
 	if err := gl.Init(); err != nil {
 		panic(err)
 	}

@@ -19,7 +19,8 @@ params:
     honeypot: false     # Set to true to add honeypot field in contact form
     recaptcha: false    # Set to true to add recaptcha challenge in contact form
   css:                # Uncomment to add custom CSS from a list of files
-  #   - bar.css
+    - css/normalize.css
+    - css/syntax.css
   # js:                 # Uncomment to add custom JS from a list of files
   #   - js/foo.js
   #   - bar.js

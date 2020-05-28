@@ -12,7 +12,11 @@
   <ul>
     {{ range .Pages }}
     <li>
+
+
+      {{ if not .Params.internal }}
       <time>{{ .PublishDate.Format "2006-01-02" }}</time> – <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ end }}
     </li>
     {{ end}}
   </ul>

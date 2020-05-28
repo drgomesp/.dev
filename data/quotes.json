@@ -1,10 +1,14 @@
 [
     {
-        "quote": "Typing is no substitute for thinking.;Dartmouth Basic manual, 1964.",
-        "cite": "Dartmouth Basic manual, 1964"
+        "q": "Typing is no substitute for thinking.",
+        "c": "Dartmouth Basic manual, 1964"
     },
     {
-        "quote": "Imagination is more important than knowledge.",
-        "cite": "Albert Einstein"
+        "q": "What I cannot create, I do not understand.",
+        "c": "Richard Feynman"
+    },
+    {
+        "q": "Imagination is more important than knowledge.",
+        "c": "Albert Einstein"
     }
 ]
