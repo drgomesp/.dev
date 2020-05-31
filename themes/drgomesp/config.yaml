@@ -9,11 +9,11 @@ params:
   summaries: true       # Set to true to show summaries of posts on homepage
   divider: true         # Set to false to remove divider below posts on homepage
   schema: false         # Set to true to add Schema.org metadata
-  opengraph: false      # Set to true to add Open Graph metadata
+  opengraph: true      # Set to true to add Open Graph metadata
   twittercards: false   # Set to true to add Twitter Cards metadata
   utterances:
-    repo:               # Set to Utterances repo URL to add Utterances comments
-    issueterm: pathname
+    repo: drgomesp/.dev
+    issueterm: og:title
     theme: github-light
   netlify:
     honeypot: false     # Set to true to add honeypot field in contact form
