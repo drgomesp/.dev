@@ -3,6 +3,9 @@ languageCode = "en-us"
 title = "Daniel Ribeiro"
 theme = "drgomesp"
 
+[permalinks]
+post = "/notes/:slug"
+
 [markup]
 [markup.highlight]
 codeFences = true

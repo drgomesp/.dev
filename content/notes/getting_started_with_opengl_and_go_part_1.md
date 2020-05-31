@@ -1,6 +1,6 @@
 ---
-title: "Getting started with OpenGL and Go"
-date: 2017-07-12T00:00:00-03:00
+title: "Getting started with OpenGL and Go — Part 1"
+date: 2020-05-31T14:00:00-03:00
 draft: false
 tags:
   - go
