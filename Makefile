@@ -1,5 +1,9 @@
 .PHONY: openring
 
+deploy:
+	hugo
+	firebase deploy
+
 openring: 
 	openring \
 		-s https://danluu.com/atom.xml \
