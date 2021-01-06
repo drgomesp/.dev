@@ -14,6 +14,8 @@
     {{ partial "load_site_assets.html" . }} {{ block "load_page_assets" . }}
     {{ with .Content }}{{ end }} {{ end }}
     {{ partial "assets.html" . }}
+
+    <script async defer data-domain="drgomesp.dev" src="https://plausible.io/js/plausible.js"></script>
 </head>
 
 <body>
