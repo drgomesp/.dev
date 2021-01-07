@@ -29,6 +29,12 @@ html {
     color: var(--color-dark);
 }
 
+pre {
+    font-size: smaller !important;
+}
+ 
+
+
 a {
     color: var(--color-primary);
     text-decoration: underline;
