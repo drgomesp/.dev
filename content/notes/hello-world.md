@@ -23,7 +23,7 @@ tags:
     - aws
     - sql
     - git
-    - c
+    - serverless
     - blockchain
     - web
     - databases
