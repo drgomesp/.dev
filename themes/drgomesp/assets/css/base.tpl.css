@@ -148,8 +148,8 @@ pre {
 
 .navigation blockquote {
     margin-top: auto;
-    font-size: x-small;
-    border-left: .25rem solid var(--color-silver);
+    font-size: smaller;
+    border-left: .2rem solid var(--color-silver);
     padding-left: .5rem;
 }
 
