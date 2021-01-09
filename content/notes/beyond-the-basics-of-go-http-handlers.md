@@ -2,6 +2,7 @@
 title: "Beyond the Basics of Go: HTTP Handlers"
 date: 2021-01-07T11:42:12-03:00
 draft: true
+type: note
 ---
 
 ## The `http.Handler` and `http.HandlerFunc` types

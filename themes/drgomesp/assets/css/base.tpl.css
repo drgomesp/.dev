@@ -282,7 +282,7 @@ pre {
 }
 
 .content .followed-articles {
-    font-size: smaller;
+    font-size: small;
     display: flex;
     flex-direction: row;
 }

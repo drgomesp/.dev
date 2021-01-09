@@ -5,6 +5,7 @@ draft: false
 tags:
   - go
   - opengl
+type: note
 ---
 With the recent popularization of Golang, I've decided to show how graphics programming can be done in Go using modern OpenGL techniques. I'll assume you are familiar with the concept of OpenGL and have a general idea of how it works on a higher level.
 

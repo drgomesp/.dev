@@ -1,4 +1,4 @@
-.PHONY: openring
+.PHONY: deploy openring
 
 deploy:
 	hugo
@@ -11,4 +11,3 @@ openring:
 		-s https://drewdevault.com/feed.xml \
 			< ./openring.dist \
 			> ./themes/drgomesp/layouts/partials/openring.html
-
