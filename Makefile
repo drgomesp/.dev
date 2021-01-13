@@ -1,8 +1,7 @@
 .PHONY: deploy openring
 
 deploy:
-	hugo
-	firebase deploy
+	hugo & firebase deploy
 
 openring: 
 	openring \

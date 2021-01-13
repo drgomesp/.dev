@@ -5,7 +5,7 @@ draft: true
 type: note
 ---
 
-## The `http.Handler` and `http.HandlerFunc` types
+### The `http.Handler` and `http.HandlerFunc` types
 
 The Go standard library defines two main components for dealing with incoming HTTP requests: the [`http.Handler`](https://golang.org/pkg/net/http/#Handler) type and the [`http.HandlerFunc`](https://golang.org/pkg/net/http/#HandlerFunc) type. 
 
@@ -43,7 +43,7 @@ With the `http.HandlerFunc` type things get even easier, and you can simply defi
 func Foo(w http.ResponseWriter, req *http.Request) {}
 ```
 
-## Serving HTTP requests
+### Serving HTTP requests
 
 Once you have a valid handler, you can serve HTTP requests by writing very simple code (specifically, making use of the [`http.Handle`](https://golang.org/pkg/net/http/#Handle), [`http.HandleFunc`](https://golang.org/pkg/net/http/#HandleFunc) and the [`http.ListenAndServe`](https://golang.org/pkg/net/http/#ListenAndServe) functions), which might look like this:
 
@@ -60,10 +60,5 @@ I strongly advise referring to the source code for the documentation, which desc
 
 If you call `http.ListenAndServe` and pass `nil` as the handler argument, it will internally use `http.DefaultServeMux`. 
 
-## The `http.ServeMux` struct
-
-
-
-
-
+### The `http.ServeMux` struct
 
