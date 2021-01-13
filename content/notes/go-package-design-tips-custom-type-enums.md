@@ -2,6 +2,8 @@
 title: "Go Package Design Tips : Custom Type Enums"
 date: 2021-01-13T17:09:04-03:00
 draft: false
+tags:
+  - go
 type: note
 ---
 
