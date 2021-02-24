@@ -18,7 +18,9 @@ type UserRepository interface {
 }
 ```
 
-Now while this works, and it's a good practice to use interfaces in general, this is a bit misleading as it makes it really difficult for `UserRepository` to be portable in terms of infrastructure (think database layer). All specific implementations of the repository will have to duplicate some common code (business-specific code, maybe) which has nothing to do with the internal storage engine used by the repository.
+Now while this works, and it's a good practice to use interfaces in general, this is a bit misleading as it makes it really difficult for `UserRepository` to be portable in terms of infrastructure (think database layer). 
+
+All specific implementations of the repository will usually end up with some duplicate code (think things you need to do regardless of the internal storage engine being used), which is not ideal for obvious reasons. 
 
 For this particular reason, I generally like to define repositories as concrete types, and introduce a layer of abstraction (**drivers**) that deals with the specific details of each storage engine (pgsql, mysql, even docstore, etc):
 
